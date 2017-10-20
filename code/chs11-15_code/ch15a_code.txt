@@ -1,0 +1,48 @@
+15a.8 Recap
+
+class Shape:
+    def __init__(self, x, y):        #A
+        self.x = x                   #B
+        self.y = y                   #B
+    def move(self, delta_x, delta_y):  #C
+        self.x = self.x + delta_x      #D
+        self.y = self.y + delta_y
+class Circle(Shape):                                     #A
+    pi = 3.14159                                         #B
+    all_circles = []                                     #B
+    def __init__(self, r=1, x=0, y=0):                   #C
+        super().__init__(x, y)                           #D
+        self.radius = r
+        __class__.all_circles.append(self)               #E
+    @classmethod                                         #F
+    def total_area(cls):
+        area = 0
+        for circle in cls.all_circles:
+            area += cls.circle_area(circle.radius)       #G
+        return area
+    @staticmethod
+    def circle_area(radius):                             #H
+        return Circle.pi * radius * radius               #I
+
+>>> c1 = Circle()
+>>> c1.radius, c1.x, c1.y
+(1, 0, 0)
+>>> c2 = Circle(2, 1, 1)
+>>> c2.radius, c2.x, c2.y
+(2, 1, 1)
+>>> c2.move(2, 2)
+>>> c2.radius, c2.x, c2.y
+(2, 3, 3)
+>>> Circle.all_circles
+[<__main__.Circle object at 0x7fa88835e9e8>, <__main__.Circle object at 0x7fa88835eb00>]
+>>> [c1, c2]
+[<__main__.Circle object at 0x7fa88835e9e8>, <__main__.Circle object at 0x7fa88835eb00>]
+>>> Circle.total_area()
+15.70795
+>>> c2.total_area()
+15.70795
+>>> Circle.circle_area(c1.radius)
+3.14159
+>>> c1.circle_area(c1.radius)
+3.14159
+

@@ -1,0 +1,13 @@
+CHICAGO O'HARE INTERNATIONAL, IL, United States (KORD) 41-59N 087-55W 200M
+Oct 10, 2017 - 10:44 PM EDT / 2017.10.11 0244 UTC
+Wind: from the NE (040 degrees) at 14 MPH (12 KT):0
+Visibility: 9 mile(s):0
+Sky conditions: overcast
+Weather: light rain
+Precipitation last hour: 0.05 inches
+Temperature: 59.0 F (15.0 C)
+Dew Point: 55.9 F (13.3 C)
+Relative Humidity: 89%
+Pressure (altimeter): 30.03 in. Hg (1016 hPa)
+ob: KORD 110244Z 04012KT 9SM -RA BKN013 BKN060 OVC100 15/13 A3003 RMK AO2 P0005 T01500133
+cycle: 2

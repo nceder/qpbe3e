@@ -1,0 +1,24 @@
+"""create an address table
+
+Revision ID: b2ec3f7fb212
+Revises: 
+Create Date: 2017-10-14 15:35:18.647291
+
+"""
+from alembic import op
+import sqlalchemy as sa
+
+
+# revision identifiers, used by Alembic.
+revision = 'b2ec3f7fb212'
+down_revision = None
+branch_labels = None
+depends_on = None
+
+
+def upgrade():
+    pass
+
+
+def downgrade():
+    pass

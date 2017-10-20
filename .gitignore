@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# doctest symlink
+*doctester.py
+
 # C extensions
 *.so
 
