@@ -1,4 +1,4 @@
-#!/env python3.1
+#!/env python3
 
 """ Reads a file and returns the number of lines, words,
     and characters - similar to the UNIX wc utility
