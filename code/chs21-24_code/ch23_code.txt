@@ -1,7 +1,7 @@
 23.2 SQLite - using the sqlite3 database
 
 >>> import sqlite3
->>> conn = sqlite3.connect("datafile")
+>>> conn = sqlite3.connect("datafile.db")
 
 
 >>> cursor = conn.cursor()
@@ -53,7 +53,7 @@
 >>> from sqlalchemy.orm import sessionmaker
 
 
->>> dbPath = 'datafile2'
+>>> dbPath = 'datafile2.db'
 >>> engine = create_engine('sqlite:///%s' % dbPath)
 >>> metadata = MetaData(engine)
 >>> people  = Table('people', metadata, 
