@@ -30,11 +30,12 @@ NameError: name 'x' is not defined
 
 x = 3
 y = 5
-z = (x + y)/2
+z = (x + y) / 2
 
 
 4.5 Strings
 
+x = "Hello, World"
 x = "\tThis string starts with a \"tab\"." 
 x = "This string contains a single backslash(\\)."
 x = "Hello, World"
@@ -50,13 +51,13 @@ backslashes"""
 
 4.6 Numbers
 
->>> 5 +2 - 3 * 2
+>>> 5 + 2 - 3 * 2
 1
->>> 5/2        # Two integers produce a floating point result with normal division
+>>> 5 / 2          # floating-point result with normal division
 2.5
->>> 5/2.0        # Using a float and an integer will also produce a floating point result
+>> 5 / 2.0         # also a floating-point result
 2.5
->>> 5//2        # Two integers produce an integer result with truncation when divided using '//'
+>>> 5 // 2         # integer result with truncation when divided using '//'
 2
 >>> 30000000000    # This would be too large to be an int in many languages
 30000000000
@@ -92,6 +93,8 @@ backslashes"""
 3.0
 >>> z.imag
 5.0
+
+4.6.5 Advanced complex-number functions
 
 >>> import cmath
 >>> cmath.sqrt(-1)

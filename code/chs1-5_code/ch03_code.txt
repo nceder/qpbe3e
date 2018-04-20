@@ -65,7 +65,7 @@ True
 >>> x[-2:-1]                  #3
 ['third']                     #3
 >>> x[:3]                     #3
-['first', 'second', 'third'] #4
+['first', 'second', 'third']  #4
 >>> x[-2:]                    #4
 ['third', 'fourth']           #4
 
@@ -243,7 +243,45 @@ for x in item_list:                         #1
 >>> funct4(1, 2, m=5, n=9, z=3)
 1 2 3 {'n': 9, 'm': 5}
 
-03.3.5 Functions
+03.3.6 Exceptions
+
+class EmptyFileError(Exception):
+    pass
+filenames = ["myfile1", "nonExistent", "emptyFile", "myfile2"]
+for file in filenames:
+    try:
+	f = open(file, 'r')
+    	line = f.readline()
+    	if line == "":
+            f.close()
+            raise EmptyFileError("%s: is empty" % file)
+    except IOError as error:
+    	print("%s: could not be opened: %s" % (file, error.strerror)
+    except EmptyFileError as error:
+    	 print(error)
+    else:
+        print("%s: %s" % (file, f.readline()))
+    finally:
+        print("Done processing", file)
+
+03.3.7 Context handling using the with keyword
+
+filename = "myfile.txt"
+with open(filename, "r") as f:
+    for line in f:
+        print(f)
+
+filename = "myfile.txt"
+try:
+    f = open(filename, "r")
+    for line in f:
+        print(f)
+except Exception as e:
+    raise e
+finally:
+    f.close()
+
+03.5 Object-oriented programming
 
 >>> import sh
 >>> c1 = sh.Circle()           #1

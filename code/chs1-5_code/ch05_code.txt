@@ -357,7 +357,7 @@ TypeError: 'tuple' object does not support item assignment
 >>> ()        # To create an empty tuple, use an empty pair of parentheses.
 ()
 
-05.7.3 Tuple packin
+05.7.3 Tuple packing
 
 >>> (one, two, three, four) =  (1, 2, 3, 4)
 >>> one
@@ -365,6 +365,7 @@ TypeError: 'tuple' object does not support item assignment
 >>> two
 2
 
+one, two, three, four = 1, 2, 3, 4
 
 >>> x = (1, 2, 3, 4)
 >>> a, b, *c = x
