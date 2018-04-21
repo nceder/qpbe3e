@@ -10,7 +10,7 @@ class Circle:
 >>> my_circle = Circle()
 >>> my_circle.radius = 5
 >>> print(2 * 3.14 * my_circle.radius)
-31.400000000000002
+31.4
 
 
 >>> my_circle = Circle()                    #2
@@ -75,6 +75,8 @@ class Circle:
 
 >>> c.__class__.pi
 3.14159
+
+
 15.4.1 An oddity with class variables
 
 class Circle:
@@ -250,20 +252,26 @@ class Circle(Shape):                                     #A
 >>> c1 = Circle()
 >>> c1.radius, c1.x, c1.y
 (1, 0, 0)
+
 >>> c2 = Circle(2, 1, 1)
 >>> c2.radius, c2.x, c2.y
 (2, 1, 1)
+
 >>> c2.move(2, 2)
 >>> c2.radius, c2.x, c2.y
 (2, 3, 3)
+
 >>> Circle.all_circles
 [<__main__.Circle object at 0x7fa88835e9e8>, <__main__.Circle object at 0x7fa88835eb00>]
 >>> [c1, c2]
-[<__main__.Circle object at 0x7fa88835e9e8>, <__main__.Circle object at 0x7fa88835eb00>]
+[<__main__.Circle object at 0x7fa88835e9e8>, <__main__.Circle object
+>>> at 0x7fa88835eb00>]
+
 >>> Circle.total_area()
 15.70795
 >>> c2.total_area()
 15.70795
+
 >>> Circle.circle_area(c1.radius)
 3.14159
 >>> c1.circle_area(c1.radius)

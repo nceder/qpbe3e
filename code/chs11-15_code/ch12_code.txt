@@ -6,7 +6,7 @@
 
 >>> os.listdir(os.curdir)
 
->>> os.chdir(folder)     #A
+>>> os.chdir(folder_name)     #A
 >>> os.getcwd()
 
 12.2.3 Accessing directories with pathlib
@@ -85,6 +85,10 @@ some\directory
 
 12.2.6 Useful constants and functions
 
+>>> import os
+>>> os.name
+'nt'
+
 import os
 if os.name == 'posix':
     root_dir = "/"
@@ -92,10 +96,6 @@ elif os.name == 'nt':
     root_dir = "C:\\"
 else:
     print("Don't understand this operating system!")
-
->>> import os
->>> os.name
-'nt'
 
 12.3. Getting information about files
 

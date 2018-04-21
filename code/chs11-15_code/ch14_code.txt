@@ -111,13 +111,16 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 __main__.MyError: Some information about what went wrong
 
+Situation: Some information with file my_filename
+error code: 3 
+
 14.2.5 Debugging programs with the assert statement
 
 >>> x = (1, 2, 3)
 >>> assert len(x) > 5
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-AssertionError
+AssertionError: len(x) not > 5
 
 14.2.6 Exception inheritance hierarchy
 
