@@ -28,24 +28,6 @@ False
 >>> print("\the")
         he
 
-16.3.1 Raw strings to the rescue
-
-r"Hello"
-r"""\tTo be\n\tor not to be"""
-r'Goodbye'
-r'''12345'''
-
->>> r"Hello" == "Hello"
-True
->>> r"\the" == "\\the"
-True
->>> r"\the" == "\the"
-False
->>> print(r"\the")
-\the
->>> print("\the")
-        he
-
 16.4 Extracting matched text from strings
 
 import re

@@ -25,16 +25,23 @@ False
 >>> class B(A):
 ...     pass
 ...
+
 >>> b = B()
+
 >>> type(b)
 <class '__main__.B'>
+
 >>> b.__class__
 <class '__main__.B'>
+
 >>> b_class = b.__class__
+
 >>> b_class == B
 True
+
 >>> b_class.__name__
 'B'
+
 >>> b_class.__bases__
 (<class '__main__.A'>,)
 
@@ -65,6 +72,7 @@ False
 >>> y = 12
 >>> isinstance(y, type(5))                          #4
 True
+
 >>> issubclass(C, D)
 False
 >>> issubclass(E, D)
