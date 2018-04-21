@@ -142,6 +142,12 @@ def fact(n):
 >>> b
 'two'
 
+top level-> g_var: 0 nl_var: 0
+in test-> g_var: 0 nl_var: 2
+in inner_test-> g_var: 1 nl_var: 4
+in test-> g_var: 1 nl_var: 4
+top level-> g_var: 1 nl_var: 0
+
 09.5 9.5	Assigning functions to variables
 
 >>> def f_to_kelvin(degrees_f):                     #A
@@ -191,6 +197,19 @@ in generator, x = 2
 2
 in generator, x = 3
 3
+
+>>> 2 in four()
+in generator, x = 0
+in generator, x = 1
+in generator, x = 2
+True
+>>> 5 in four()
+in generator, x = 0
+in generator, x = 1
+in generator, x = 2
+in generator, x = 3
+False
+
 
 09.8 Decorators
 

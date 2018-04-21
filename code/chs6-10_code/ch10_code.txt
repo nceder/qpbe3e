@@ -65,10 +65,10 @@ NameError: name '_b' is not defined
 
 >>> locals()
 {'__builtins__': <module 'builtins' (built-in)>, '__name__': '__main__', 
-[CA]'__doc__': None, '__package__': None}
+'__doc__': None, '__package__': None}
 >>> globals()
 {'__builtins__': <module 'builtins' (built-in)>, '__name__': '__main__', 
-[CA]'__doc__': None, '__package__': None}>>> 
+'__doc__': None, '__package__': None}>>> 
 
 
 >>> z = 2
@@ -76,14 +76,14 @@ NameError: name '_b' is not defined
 >>> from cmath import cos
 >>> globals()
 {'cos': <built-in function cos>, '__builtins__': <module 'builtins' 
-[CA](built-in)>, '__package__': None, '__name__': '__main__', 'z': 2,
-[CA]'__doc__': None, 'math': <module 'math' from 
-[CA]'/usr/local/lib/python3.0/libdynload/math.so'>}
+(built-in)>, '__package__': None, '__name__': '__main__', 'z': 2,
+'__doc__': None, 'math': <module 'math' from 
+'/usr/local/lib/python3.0/libdynload/math.so'>}
 >>> locals()
 {'cos': <built-in function cos>, '__builtins__':
-[CA] <module 'builtins' (built-in)>, '__package__': None, '__name__': 
-[CA]'__main__', 'z': 2, '__doc__': None, 'math': <module 'math' from
-[CA]'/usr/local/lib/python3.0/libdynload/math.so'>}
+<module 'builtins' (built-in)>, '__package__': None, '__name__': 
+'__main__', 'z': 2, '__doc__': None, 'math': <module 'math' from
+'/usr/local/lib/python3.0/libdynload/math.so'>}
 >>> math.ceil(3.4)
 4
 
@@ -110,75 +110,23 @@ NameError: math is not defined
 >>> z = 2
 >>> globals()
 {'f': <function f at 0xb7cbfeac>, '__builtins__': <module 'builtins' 
-[CA](built-in)>, '__package__': None, '__name__': '__main__', 'z': 2, 
-[CA]'__doc__': None}
+(built-in)>, '__package__': None, '__name__': '__main__', 'z': 2, 
+'__doc__': None}
 >>> f(z)
 global:  {'f': <function f at 0xb7cbfeac>, '__builtins__': <module 
-[CA]'builtins' (built-in)>, '__package__': None, '__name__': '__main__', 
-[CA]'z': 2, '__doc__': None}
+'builtins' (built-in)>, '__package__': None, '__name__': '__main__', 
+'z': 2, '__doc__': None}
 Entry local:  {'x': 2}
 Exit local:  {'y': 2, 'x': 2}
 >>>
 
-10.7 10.7	Python scoping rules and namespaces
+10.7	Python scoping rules and namespaces
 
 >>> locals()
 {'__builtins__': <module 'builtins' (built-in)>, '__name__': '__main__', 
-[CA]'__doc__': None, '__package__': None}
+'__doc__': None, '__package__': None}
 >>> globals()
 {'__builtins__': <module 'builtins' (built-in)>, '__name__': '__main__', 
-[CA]'__doc__': None, '__package__': None}>>> 
-
-
->>> z = 2
->>> import math
->>> from cmath import cos
->>> globals()
-{'cos': <built-in function cos>, '__builtins__': <module 'builtins' 
-[CA](built-in)>, '__package__': None, '__name__': '__main__', 'z': 2,
-[CA]'__doc__': None, 'math': <module 'math' from 
-[CA]'/usr/local/lib/python3.0/libdynload/math.so'>}
->>> locals()
-{'cos': <built-in function cos>, '__builtins__':
-[CA] <module 'builtins' (built-in)>, '__package__': None, '__name__': 
-[CA]'__main__', 'z': 2, '__doc__': None, 'math': <module 'math' from
-[CA]'/usr/local/lib/python3.0/libdynload/math.so'>}
->>> math.ceil(3.4)
-4
-
-
->>> del z, math, cos
->>> locals()
-{'__builtins__': <module 'builtins' (built-in)>, '__package__': None, 
-'__name__': '__main__', '__doc__': None}
->>> math.ceil(3.4)
-Traceback (innermost last):
-  File "<stdin>", line 1, in <module>
-NameError: math is not defined
->>> import math
->>> math.ceil(3.4)
-4
-
-
->>> def f(x):
-...     print("global: ", globals())
-...     print("Entry local: ", locals())
-...     y = x
-...     print("Exit local: ", locals())
-...
->>> z = 2
->>> globals()
-{'f': <function f at 0xb7cbfeac>, '__builtins__': <module 'builtins' 
-[CA](built-in)>, '__package__': None, '__name__': '__main__', 'z': 2, 
-[CA]'__doc__': None}
->>> f(z)
-global:  {'f': <function f at 0xb7cbfeac>, '__builtins__': <module 
-[CA]'builtins' (built-in)>, '__package__': None, '__name__': '__main__', 
-[CA]'z': 2, '__doc__': None}
-Entry local:  {'x': 2}
-Exit local:  {'y': 2, 'x': 2}
->>>
-
 >>> import scopetest
 >>> z = 2
 >>> scopetest.f(z)

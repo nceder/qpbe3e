@@ -269,7 +269,7 @@ True
 >>> "{0:&>10} is the food of gods".format("Ambrosia")           #4
 '&&Ambrosia is the food of gods'
 
-06.7 Formatting strings with 5
+06.7 Formatting strings with %
 
 >>> "%s is the %s of %s" % ("Ambrosia", "food", "the gods")
 'Ambrosia is the food of the gods'
@@ -303,9 +303,8 @@ True
 >>> message = f"The answer is {value}"
 >>> print(message)
 The answer is 42
+
 >>> pi = 3.1415
-
-
 >>> print(f"pi is {pi:{10}.{2}}")
 pi is        3.1
 

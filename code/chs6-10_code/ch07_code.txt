@@ -25,8 +25,6 @@ Hello
 >>> y["two"] * y["pi"]
 6.28
 
-07.1.1 Why 7.1.1	Why dictionaries are called dictionaries
-
 >>> english_to_french = {}                    #A
 >>> english_to_french['red'] = 'rouge'          #B
 >>> english_to_french['blue'] = 'bleu'
