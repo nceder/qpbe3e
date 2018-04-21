@@ -111,7 +111,7 @@ Sunshine data taken from an automatic Kipp & Zonen sensor marked with a #, other
   }
 }
 
-
+>>> outfile = open("mars_data.json", "w")
 >>> for report in weather_list:
 ...     json.dump(weather, outfile) 
 >>> outfile.close()
