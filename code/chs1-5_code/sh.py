@@ -7,11 +7,15 @@ class Shape:
     def move(self, deltaX, deltaY):
         self.x = self.x + deltaX
         self.y = self.y + deltaY
+        
+        
 class Square(Shape): 
     """Square Class:inherits from Shape"""
     def __init__(self, side=1, x=0, y=0):
         Shape.__init__(self, x, y)
         self.side = side
+        
+        
 class Circle(Shape): 
     """Circle Class: inherits from Shape and has method area"""
     pi = 3.14159
